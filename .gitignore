@@ -1,3 +1,5 @@
 reports
 node_modules
 .git
+travis.log
+input.txt
