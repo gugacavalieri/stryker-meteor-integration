@@ -1,6 +1,6 @@
 
-[![Build Status](https://travis-ci.org/gugacavalieri/unit-testing-with-testdouble.svg?branch=master)](https://travis-ci.org/gugacavalieri/unit-testing-with-testdouble)
-[![Mutation Score](https://badge.stryker-mutator.io/github.com/gugacavalieri/unit-testing-with-testdouble/master)](https://badge.stryker-mutator.io/github.com/gugacavalieri/unit-testing-with-testdouble/master)
+[![Build Status](https://travis-ci.org/gugacavalieri/stryker-meteor-integration.svg?branch=master)](https://travis-ci.org/gugacavalieri/stryker-meteor-integration)
+[![Mutation testing badge](https://badge.stryker-mutator.io/github.com/gugacavalieri/stryker-meteor-integration/master)](https://stryker-mutator.github.io)
 
 # Integrating [Stryker](https://stryker-mutator.io) with [Meteor](https://www.meteor.com/) ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)
 
