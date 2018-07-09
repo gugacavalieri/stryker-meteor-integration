@@ -16,6 +16,10 @@
 
 ## How to Run Tests
 
+Install Project:
+
+    npm i
+
 Unit Tests:
 
     npm test
