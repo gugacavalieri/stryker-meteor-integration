@@ -1,0 +1,37 @@
+{
+  "name": "sane-unit-testing",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "mocha ./tests --compilers js:babel-register",
+    "test-watch": "npm test -- -w",
+    "test-stryker": "stryker run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^15.1.0",
+    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-preset-meteor": "^6.11.1",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.9.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "stryker": "^0.24.2",
+    "stryker-api": "^0.17.3",
+    "stryker-babel-transpiler": "^0.5.3",
+    "stryker-html-reporter": "^0.14.3",
+    "stryker-javascript-mutator": "^0.7.3",
+    "stryker-mocha-framework": "^0.10.3",
+    "stryker-mocha-runner": "^0.12.3",
+    "testdouble": "^3.8.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
