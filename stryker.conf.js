@@ -1,8 +1,7 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     testRunner: 'mocha',
     mutator: 'javascript',
-    transpilers: [],
     reporter: ['clear-text', 'progress', 'html', 'dashboard'],
     testFramework: 'mocha',
     coverageAnalysis: 'off',
@@ -14,7 +13,7 @@ module.exports = function(config) {
 
     // specify where the test files are
     mochaOptions: {
-            files: [ 'tests/**/*.js' ]
-        }
-  });
-};
+      files: [ 'tests/**/*.js' ]
+    }
+  })
+}
