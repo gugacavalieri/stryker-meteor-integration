@@ -26,7 +26,7 @@ Unit Tests:
 
 Mutation Tests:
 
-    npm test-stryker
+    npm run test-stryker
 
 
 ## .babelrc File
