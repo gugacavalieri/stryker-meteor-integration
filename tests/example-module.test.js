@@ -1,32 +1,28 @@
-import { expect } from 'chai';
-import td from 'testdouble';
+import td from 'testdouble'
 
-describe("example-module", function() {
+describe('example-module', () => {
+  const Meteor = td.object(['call'])
+  const ExampleCollection = td.object(['insert'])
+  let flattenAndCall, exampleInsert
 
-  let Meteor = td.object(["call"]);
-  let ExampleCollection = td.object(["insert"]);
-  let flattenAndCall, exampleInsert;
+  beforeEach(() => {
+    td.replace('meteor/meteor', { Meteor })
+    td.replace('../imports/example-collection', { ExampleCollection })
+    flattenAndCall = require('../imports/hello-module').flattenAndCall
+    exampleInsert = require('../imports/hello-module').exampleInsert
+  })
 
-  before(function() {
-    td.replace("meteor/meteor", { Meteor });
-    td.replace("../imports/example-collection", { ExampleCollection });
+  afterEach(() => {
+    td.reset()
+  })
 
-    flattenAndCall = require("../imports/hello-module").flattenAndCall;
-    exampleInsert = require("../imports/hello-module").exampleInsert;
-  });
+  it('calls a meteor method', () => {
+    flattenAndCall([1, 2, [3, 4, [5]]])
+    td.verify(Meteor.call('example-method', [1, 2, 3, 4, 5]))
+  })
 
-  after(function() {
-    td.reset();
-  });
-
-  it("calls a meteor method", function() {
-    flattenAndCall([1, 2, [3, 4, [5]]]);
-    td.verify(Meteor.call("example-method", [1, 2, 3, 4, 5]));
-  });
-
-  it("inserts a value", function() {
-    exampleInsert(123);
-    td.verify(ExampleCollection.insert({ value: 123 }));
-  });
-
-});
+  it('inserts a value', () => {
+    exampleInsert(123)
+    td.verify(ExampleCollection.insert({ value: 123 }))
+  })
+})
